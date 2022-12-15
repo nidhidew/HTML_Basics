@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>PUT Method</h1>
+        <script>
+            fetch('https://jsonplaceholder.typicode.com/todos/2',{
+                method: 'PUT',
+                headers: {'content-type': 'application/json'},
+                body: JSON.stringify({
+                    userId: 2,
+                    id: 200,
+                    title: "put method trial",
+                    completed: true
+                })
+            })
+                    .then(response => response.json())
+                    .then(json => console.log(json))
+        </script>
+    </body>
+</html>

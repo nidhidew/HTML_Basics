@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>DELETE Method</h1>
+        <script>
+            fetch('https://jsonplaceholder.typicode.com/todos/1',{
+                method: 'DELETE',
+            })
+                    .then(response => response.json())
+                    .then(json => console.log(json))
+        </script>
+    </body>
+</html>

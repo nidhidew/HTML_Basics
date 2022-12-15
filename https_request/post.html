@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>POST Method</h1>
+        <script>
+            fetch('https://jsonplaceholder.typicode.com/todos',{
+                method: 'POST',
+                headers: {'content-type': 'application/json'},
+                body: JSON.stringify({
+                    userId: 6,
+                    id: 6,
+                    title: "post method trial",
+                    completed: true
+                })
+            })
+                    .then(response => response.json())
+                    .then(json => console.log(json))
+        </script>
+    </body>
+</html>
