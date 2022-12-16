@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <h2>Multiple Request</h2>
+        <script>
+            function getAccount(){
+                return axios.get('https://jsonplaceholder.typicode.com/todos/1');
+            }
+            function getPermission(){
+                return axios.get('https://jsonplaceholder.typicode.com/todos/2');
+            }
+            Promise.all([getAccount(), getPermission()])
+                .then(function (results) {
+                    const acct = results[0];
+                    const perm = results[1];
+                    console.log(acct," ",perm);
+                });
+        </script>
+    </body>
+</html>
